@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean/env.dart';
 import 'package:flutter_clean/features/blocs/daily_news_bloc.dart';
@@ -56,7 +55,7 @@ class _DailyNewsPageState extends State<DailyNewsPage> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           image: DecorationImage(
-                            image: NetworkImage(article.urlToImage ?? ''),
+                            image: NetworkImage(article.urlToImage),
                             fit: BoxFit.fitWidth,
                           ),
                         ),
