@@ -1,0 +1,24 @@
+{
+    "model_json": {
+      "scope": "dart",
+      "prefix": "model_json",
+      "body": [
+        "import 'package:json_annotation/json_annotation.dart';",
+        "",
+        "part '$TM_FILENAME_BASE.g.dart';",
+        "",
+        "@JsonSerializable()",
+        "class $1 {",
+        "  final String email;",
+        "  final String password;",
+        "  $1({",
+        "    required this.email,",
+        "    required this.password,",
+        "  });",
+        "",
+        "  factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);",
+        "  Map<String, dynamic> toJson() => _$$1ToJson(this);",
+        "}",
+      ]
+    }
+  }

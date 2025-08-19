@@ -1,0 +1,21 @@
+{
+  "UseCase": {
+    "scope": "dart",
+    "prefix": "usecase",
+    "body": [
+      "import 'package:injectable/injectable.dart';",
+      "",
+      "@injectable",
+      "class $1UseCase extends UseCase<$2, $3> {",
+      "  final FavSearchApiRepo _repo;",
+      "",
+      "  $1UseCase(this._repo);",
+      "",
+      "  @override",
+      "  Future<$3> call(params) async {",
+      "    return _repo.getFavSearch();",
+      "  }",
+      "}"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "model_json": {
+    "scope": "dart",
+    "prefix": "state_snip",
+    "body": [
+      "import 'package:equatable/equatable.dart';",
+      "",
+      "class $1State extends Equatable implements ErrorState {",
+      "  final double? totalPrice;",
+      "  final String? error;",
+      "  final bool isLoading;",
+      "",
+      "  const $1State({",
+      "    this.totalPrice = 0,",
+      "    this.error,",
+      "    this.isLoading = false",
+      "  });",
+      "",
+      "  $1State copyWith({",
+      "    double? totalPrice,",
+      "    String? error,",
+      "    bool? isLoading",
+      "  }) {",
+      "    return $1State(",
+      "      error: error ?? this.error,",
+      "      totalPrice: totalPrice ?? this.totalPrice,",
+      "      isLoading: isLoading ?? this.isLoading",
+      "    );",
+      "  }",
+      "",
+      "  @override",
+      "  List<Object?> get props => [",
+      "    totalPrice,",
+      "    error",
+      "    isLoading",
+      "  ];",
+      "",
+      "  @override",
+      "  String? get errorMessage => error;",
+      "}"
+    ]
+  }
+}

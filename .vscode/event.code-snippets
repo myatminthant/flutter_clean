@@ -1,0 +1,17 @@
+{
+    "model_json": {
+      "scope": "dart",
+      "prefix": "event_snip",
+      "body": [
+        "",
+        "abstract class $1Event {",
+        "  const $1Event();",
+        "}",
+        "",
+        "class GetEvent extends $1Event {",
+        "  final String uid;",
+        "  const GetEvent({required this.uid});",
+        "}",
+      ]
+    }
+  }

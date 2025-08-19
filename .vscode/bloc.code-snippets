@@ -1,0 +1,30 @@
+{
+    "model_json": {
+      "scope": "dart",
+      "prefix": "bloc_snip",
+      "body": [
+        "import 'package:flutter_bloc/flutter_bloc.dart';",
+        "import 'package:injectable/injectable.dart';",
+        "",
+        "@injectable",
+        "class $1Bloc extends Bloc<$1Event, $1State> {",
+        "  final GetChatUseCase _getChatUseCase;",
+        "  $1Bloc(",
+        "    this._getChatUseCase,",
+        "  ) : super($1InitialState()) {",
+        "    on<GetChatEvent>(_onGetChatEvent);",
+        "  }",
+        "",
+          "void _onGetChatEvent(GetChatEvent event, Emitter emit) async {",
+          "  emit(state.copyWith(isLoading: true));",
+          "  try {",
+          "    final response = await _getChatUseCase.call(event.uid);",
+          "    emit(state.copyWith(isLoading: false));",
+          "  } catch (e) {",
+          "    emit(state.copyWith(isLoading: false, error: 'Error'));",
+          "  }",
+          "}",
+        "}",
+      ]
+    }
+  }

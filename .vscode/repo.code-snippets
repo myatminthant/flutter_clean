@@ -1,0 +1,23 @@
+{
+  "Repo": {
+    "scope": "dart",
+    "prefix": "repo",
+    "body": [
+      "import 'package:injectable/injectable.dart';",
+      "import 'package:retrofit/retrofit.dart';",
+      "import 'package:dio/dio.dart';",
+      "",
+      "part '$2_api_repo.g.dart';",
+      "",
+      "@injectable",
+      "@RestApi()",
+      "abstract class $1ApiRepo {",
+      "@factoryMethod",
+      "  factory $1ApiRepo(Dio dio) => _$1ApiRepo(dio);",
+      "",
+      "  @GET('/property/search/{id}')",
+      "  Future<void> get$1List(@Path('id') id,  @Query('search') search, @Body() request,);",
+      "}",
+    ]
+  }
+}
